@@ -9,9 +9,15 @@
   <link rel="stylesheet" href="custom.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+<body class="bg-gray-900 text-white"> 
 
-<body class="bg-gray-900 text-white">
-  <div id="cursor"></div>
+  <div class="fixed inset-0 -z-10 
+bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px,transparent_40px)]">
+</div>
+  <div id="cursor">
+    <div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+  </div>
   <div class="fixed top-0 left-0 w-full h-1 bg-gray-700 z-50">
   <div id="scroll-bar" class="h-full bg-blue-300 w-0"></div>
 </div>
@@ -25,10 +31,11 @@
 <div class="flex min-h-screen">
 
   <!-- SIDEBAR -->
+  
   <aside class="w-64 bg-gray-800 p-6 fixed h-full">
 
     <div class="text-center">
-      <img src="Myphoto.jpeg" class="w-24 h-24 rounded-full mx-auto mb-4" />
+      <img src="Myphoto.jpeg" class="w-28 h-28 rounded-full mx-auto mb-4" />
       <h2 class="text-xl font-bold">Priyanka S</h2>
       <p class="text-sm text-gray-400">Full stack Developer | MERN stack | Digital marketing</p>
       <a href="Priya resume.pdf" download
@@ -38,14 +45,14 @@
     </div>
 
     <!-- SOCIAL LINKS -->
-    <!-- <div class="mt-6 text-center space-y-2">
+    <div class="mt-6 text-center space-y-2">
       <a href="https://github.com/priyanka-369-maker/MERN_Stu_FebMay26Mys" target="_blank"
          class="block text-blue-400 hover:underline">GitHub 800+</a>
 
       <a href="https://www.linkedin.com/in/priyanka-s-b8a8a230b" target="_blank"
          class="block text-blue-400 hover:underline">LinkedIn</a>
-    </div>-->
-    <div class="mt-6 space-y-3">
+    </div>
+    <!-- <div class="mt-6 space-y-3">
 
   <a href="https://github.com/priyanka-369-maker/MERN_Stu_FebMay26Mys"
      target="_blank"
@@ -63,11 +70,13 @@
     <span>LinkedIn</span>
   </a>
 
-</div>
+</div>  -->
+
 
     <!-- NAVIGATION -->
     <nav class="mt-10 space-y-4">
       <a href="#home" class="block hover:text-blue-400">Home</a>
+      <a href="#about" class="block hover:text-blue-400">About</a>
       <a href="#projects" class="block hover:text-blue-400">Projects</a>
       <a href="#skills" class="block hover:text-blue-400">Skills</a>
       <a href="#education" class="block hover:text-blue-400">Education</a>
@@ -81,7 +90,29 @@
   <main class="ml-64 flex-1 p-10 space-y-20">
 
     <!-- THEME BUTTON -->
-    <div class="flex justify-end">
+     <div class="flex justify-end">
+      
+    <!-- Social Icons -->
+  <div class="flex items-center gap-6 text-gray-400">
+
+    <a href="https://github.com/yourusername" target="_blank">
+      <i data-lucide="github" class="w-6 h-6 hover:text-white transition"></i>
+    </a>
+
+    <a href="https://instagram.com/priya__shivaram target="_blank">
+      <i data-lucide="instagram" class="w-6 h-6 hover:text-pink-400 transition"></i>
+    </a>
+
+    <a href="mailto:priyashivaram2005@gmail.com">
+      <i data-lucide="mail" class="w-6 h-6 hover:text-blue-400 transition"></i>
+    </a>
+
+  </div>
+  <div class="w-10 h-10 flex items-center justify-center   text-white font-bold">
+    PS
+  </div>
+
+    
       <button id="theme-toggle" class="px-4 py-2 rounded-lg bg-gray-700">
          Dark
       </button>
@@ -90,9 +121,9 @@
     <!-- HERO -->
  <section id="home">
  
-<h2 id="greeting" class="text-3xl font-bold text-White-300 mb-2"></h2>
+<h2 id="greeting" class="text-1xl font-bold text-White-300 mb-2"></h2>
   <h1 class="text-5xl font-bold mb-4 shine-text">
-   I'm Priyanka 
+   Hi,I'm Priyanka 
   </h1>
   
 
@@ -114,10 +145,23 @@
         <a href="#contact" class="border px-6 py-3 rounded-lg">Contact</a>
       </div>
     </section>
-
+    <!--ABOUT-->
+    <section id="about">
+      <h2 class="text-3xl font-bold mb-6 text-center">About</h2>
+<p class="text-gray-400">
+  I am a passionate Full Stack Developer specializing in the MERN stack, with a strong interest in building responsive and user-friendly web applications. <br>
+  I enjoy working with data, creating visualizations, and continuously learning new technologies to grow as a developer.
+</p>
+ <div class="grid grid-cols-2 gap-4 mt-6 text-gray-400">
+    <p>💻 800+ GitHub contributions</p>
+    <p> Competative programmer</p>
+    <p>🚀 Project Builder</p>
+    <p>🎯 Focused on Full Stack</p>
+  </div>
+</section>
     <!-- PROJECTS -->
     <section id="projects">
-      <h2 class="text-3xl font-bold mb-6">Projects</h2>
+      <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
 
       <div class="flex gap-4 mb-6">
         <input id="project-search" type="text"
@@ -133,21 +177,23 @@
       </div>
 
       <!-- Dynamic Projects -->
-      <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-
+      <!-- <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div> -->
+     
+<div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10"></div>
       <p id="project-count" class="mt-4 text-gray-400"></p>
+      
     </section>
 
     <!-- SKILLS -->
     <section id="skills">
-      <h2 class="text-3xl font-bold mb-6">Skills</h2>
+      <h2 class="text-3xl font-bold mb-6 text-center">Skills</h2>
 
       <div id="skills-container" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
     </section>
 
     <!-- EDUCATION -->
     <section id="education" class="p-10">
-  <h2 class="text-3xl font-bold mb-6">Education</h2>
+  <h2 class="text-3xl font-bold mb-6 text-center">Education</h2>
 
   <div id="experience-container" class="grid md:grid-cols-2 gap-6"></div>
   
@@ -156,14 +202,14 @@
 <!--Experience-->
 <section id="experience">
 
-      <h2 class="text-3xl font-bold mb-6"> Experience</h2>
+      <h2 class="text-3xl font-bold mb-6 text-center"> Experience</h2>
       <div id="internship-container" class="grid md:grid-cols-2 gap-6">
         </div>
     </section>
 
     <!-- CONTACT -->
    <section id="contact">
-  <h2 class="text-3xl font-bold mb-6">Contact</h2>
+  <h2 class="text-3xl font-bold mb-6 text-center">Contact</h2>
 
   <div class="grid md:grid-cols-2 gap-10">
 
@@ -269,10 +315,12 @@ toggleBtn.addEventListener('click', () => {
   }
   isDark = !isDark;
 });
-</script>
+</script> 
 <script>
   lucide.createIcons();
 </script>
-
+<footer class="text-center py-6 bg-gray-800 text-gray-400 mt-10">
+  © 2026 Priyanka S | All Rights Reserved
+</footer>
 </body>
 </html>

@@ -44,5 +44,28 @@ const projectsData = [
     status: "Demo",
     liveDemo: "#",
     github: "#"
-  }
+  },
+  {
+  id: 5,
+  name: "LinkedIn Clone",
+  category: "Frontend",
+  description:
+    "A frontend clone of LinkedIn with user profiles, posts feed, and responsive UI design, replicating core social networking features.",
+  technologies: ["ReactJS", "Tailwind CSS", "JavaScript"],
+  status: "Live",
+  liveDemo: "#",
+  github: "#"
+},
+
+{
+  id: 6,
+  name: "LinkedIn Clone REST API for Task Management",
+  category: "Backend",
+  description:
+    "A backend application that provides RESTful APIs for managing tasks, including authentication, CRUD operations, and database integration.",
+  technologies: ["Node.js", "ExpressJS", "MongoDB"],
+  status: "Live",
+  liveDemo: "#",
+  github: "#"
+}
 ];
