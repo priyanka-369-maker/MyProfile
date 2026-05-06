@@ -7,6 +7,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="custom.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="bg-gray-900 text-white">
@@ -37,13 +38,32 @@
     </div>
 
     <!-- SOCIAL LINKS -->
-    <div class="mt-6 text-center space-y-2">
+    <!-- <div class="mt-6 text-center space-y-2">
       <a href="https://github.com/priyanka-369-maker/MERN_Stu_FebMay26Mys" target="_blank"
          class="block text-blue-400 hover:underline">GitHub 800+</a>
 
       <a href="https://www.linkedin.com/in/priyanka-s-b8a8a230b" target="_blank"
          class="block text-blue-400 hover:underline">LinkedIn</a>
-    </div>
+    </div>-->
+    <div class="mt-6 space-y-3">
+
+  <a href="https://github.com/priyanka-369-maker/MERN_Stu_FebMay26Mys"
+     target="_blank"
+     class="flex items-center gap-3 text-blue-400 hover:text-blue-300"> 
+
+    <i data-lucide="github"></i>
+    <span>GitHub 800+</span>
+  </a>
+
+  <a href="https://www.linkedin.com/in/priyanka-s-b8a8a230b"
+     target="_blank"
+     class="flex items-center gap-3 text-blue-400 hover:text-blue-300">
+
+    <i data-lucide="linkedin"></i>
+    <span>LinkedIn</span>
+  </a>
+
+</div>
 
     <!-- NAVIGATION -->
     <nav class="mt-10 space-y-4">
@@ -249,6 +269,9 @@ toggleBtn.addEventListener('click', () => {
   }
   isDark = !isDark;
 });
+</script>
+<script>
+  lucide.createIcons();
 </script>
 
 </body>
