@@ -5,7 +5,7 @@ const educationsData = [
     course:"B E in Computer Science",
     year:"2022-26",
     college:"CIT",
-    percentage:"CGPA:8.4"
+    percentage:"CGPA:8.5"
   },
   {
     id:2,
