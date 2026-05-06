@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="custom.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-gray-900 text-white"> 
+ <body class="bg-gray-900 text-white light:bg-white light:text-black"> 
+
 
   <div class="fixed inset-0 -z-10 
 bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px,transparent_40px)]">
@@ -88,18 +89,18 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
 
   <!-- MAIN -->
   <main class="ml-64 flex-1 p-10 space-y-20">
+<div class="flex justify-end items-center gap-6">
 
-    <!-- THEME BUTTON -->
-     <div class="flex justify-end">
-      
-    <!-- Social Icons -->
-  <div class="flex items-center gap-6 text-gray-400">
+  
 
-    <a href="https://github.com/yourusername" target="_blank">
+  <!-- Social Icons -->
+  <div class="flex items-center gap-5 text-gray-400">
+
+    <a href="https://github.com/priyanka-369-maker" target="_blank">
       <i data-lucide="github" class="w-6 h-6 hover:text-white transition"></i>
     </a>
 
-    <a href="https://instagram.com/priya__shivaram target="_blank">
+    <a href="https://instagram.com/priya__shivaram" target="_blank">
       <i data-lucide="instagram" class="w-6 h-6 hover:text-pink-400 transition"></i>
     </a>
 
@@ -108,15 +109,20 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
     </a>
 
   </div>
-  <div class="w-10 h-10 flex items-center justify-center   text-white font-bold">
+  <!-- PS Logo -->
+  <div class="w-10 h-10 flex items-center justify-center 
+              bg-gray-900 rounded-full text-white font-bold">
     PS
   </div>
 
-    
-      <button id="theme-toggle" class="px-4 py-2 rounded-lg bg-gray-700">
-         Dark
-      </button>
-    </div>
+  <!-- Theme Button -->
+  <button id="theme-toggle" class="px-4 py-2 rounded-lg bg-gray-700">
+    Dark
+  </button>
+
+</div>
+  
+  
 
     <!-- HERO -->
  <section id="home">
@@ -317,7 +323,9 @@ toggleBtn.addEventListener('click', () => {
 });
 </script> 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
   lucide.createIcons();
+});
 </script>
 <footer class="text-center py-6 bg-gray-800 text-gray-400 mt-10">
   © 2026 Priyanka S | All Rights Reserved

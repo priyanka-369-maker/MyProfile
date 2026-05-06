@@ -123,7 +123,7 @@ function renderProjects() {
       <!-- Technologies -->
       <div class="flex flex-wrap gap-2 mt-2">
         ${project.technologies.map(tech => `
-          <span class="bg-gray-800 text-xs px-2 py-1 rounded">
+          <span class="bg-blue-300 text-xs px-2 py-1 rounded">
             ${tech}
           </span>
         `).join("")}
