@@ -14,6 +14,12 @@
   <div class="fixed top-0 left-0 w-full h-1 bg-gray-700 z-50">
   <div id="scroll-bar" class="h-full bg-blue-300 w-0"></div>
 </div>
+<div id="loader" class="fixed inset-0 flex items-center justify-center bg-gray-900 z-[9999]">
+  <div class="text-center">
+    <div class="w-12 h-12 border-4 border-blue-300 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+    <p class="text-white text-lg">Loading Portfolio...</p>
+  </div>
+</div>
 
 <div class="flex min-h-screen">
 
@@ -120,14 +126,15 @@
     </section>
 
     <!-- EDUCATION -->
-    <section id="experience" class="p-10">
+    <section id="education" class="p-10">
   <h2 class="text-3xl font-bold mb-6">Education</h2>
 
   <div id="experience-container" class="grid md:grid-cols-2 gap-6"></div>
+  
 </section>
 
 <!--Experience-->
-<section>
+<section id="experience">
 
       <h2 class="text-3xl font-bold mb-6"> Experience</h2>
       <div id="internship-container" class="grid md:grid-cols-2 gap-6">
@@ -135,23 +142,54 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
-      <h2 class="text-3xl font-bold mb-6">Contact</h2>
+   <section id="contact">
+  <h2 class="text-3xl font-bold mb-6">Contact</h2>
 
-      <form class="space-y-4 max-w-md">
-        <input type="text" placeholder="Name"
-          class="w-full p-3 rounded bg-gray-800">
+  <div class="grid md:grid-cols-2 gap-10">
 
-        <input type="email" placeholder="Email"
-          class="w-full p-3 rounded bg-gray-800">
-          <input type="message" placeholder="Message"
-          class="w-full p-3 rounded bg-gray-800">
+    <!-- LEFT: FORM -->
+    <form class="space-y-4">
+      <input type="text" placeholder="Name"
+        class="w-full p-3 rounded bg-gray-800">
 
-        <button class="bg-blue-300 px-6 py-3 rounded-lg w-full">
-          Send
-        </button>
-      </form>
-    </section>
+      <input type="email" placeholder="Email"
+        class="w-full p-3 rounded bg-gray-800">
+
+      <textarea placeholder="Message"
+        class="w-full p-3 rounded bg-gray-800"></textarea>
+
+      <button class="bg-blue-300 px-6 py-3 rounded-lg w-full">
+        Send
+      </button>
+    </form>
+
+    <!-- RIGHT: CONTACT DETAILS -->
+    <div class="space-y-4 bg-gray-800 p-6 rounded-lg">
+      <h3 class="text-xl font-semibold">Get in touch</h3>
+
+      <p>
+        📧 Email:
+        <a href="mailto:yourmail@gmail.com"
+           class="text-blue-400 hover:underline">
+           priyashivaram2005@gmail.com
+        </a>
+      </p>
+
+      <p>📍 Location: Mysuru, India</p>
+
+      <p>
+        🔗 LinkedIn:
+        <a href="https://www.linkedin.com/in/priyanka-s-b8a8a230b"
+           target="_blank"
+           class="text-blue-400 hover:underline">
+           View Profile
+        </a>
+      </p>
+    </div>
+
+  </div>
+</section>
+    
 
   </main>
 </div>
@@ -163,6 +201,7 @@
 <script src="js/data/internship.js"></script>
 <script src="js/data/testimonial.js"></script>
 
+<script src="js/features/loader.js"></script>
 <script src="js/features/project-render.js"></script>
 <script src="js/features/project-search.js"></script>
 <script src="js/features/project-filter.js"></script>
