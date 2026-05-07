@@ -118,3 +118,33 @@ body {
     border-color: transparent;
   }
 }
+
+
+/*  */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Initial hidden state */
+section {
+  opacity: 0;
+  transform: translateX(-120px);
+}
+
+/* Active animation class */
+section.show-section {
+  animation: slideLeft 0.8s ease-out forwards;
+}
+
+/* Left-side slide animation */
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
