@@ -75,7 +75,9 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
   </aside>
 
   <!-- MAIN -->
-  <main class="ml-64 flex-1 p-10 space-y-20">
+  <!-- <main class="ml-64 flex-1 p-10 "> -->
+    <main class="ml-64 flex-1 p-10 overflow-x-hidden">
+      <!-- <main class="ml-64 flex-1 p-10 overflow-y-auto overflow-x-hidden h-screen"> -->
 <div class="flex justify-end items-center gap-6">
 
   
@@ -108,12 +110,12 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
   </button>
 
 </div>
-  
+ 
   
 
     <!-- HERO -->
- <section id="home" class="slide-down">
-  <div class="inline-flex items-center gap-2 px-4 py-1 
+  <!-- <section id="home" class="slide-down">
+  <div class="inline-flex items-center gap-2 px-2 py-1
             rounded-full border border-blue-500/30 
             bg-blue-500/10 text-blue-400 text-sm font-medium">
 
@@ -145,24 +147,79 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
         <a href="#projects" class="bg-blue-300 px-6 py-3 rounded-lg">View Work</a>
         <a href="#contact" class="border px-6 py-3 rounded-lg">Contact</a>
       </div>
-    </section>
-    <!--ABOUT-->
+    </section>  -->
+    <section id="home" class="slide-down flex flex-col justify-start pt-24 min-h-screen">
+
+  <div class="max-w-2xl">
+
+    <div class="inline-flex items-center gap-2 px-4 py-1 
+      rounded-full border border-blue-500/30 
+      bg-blue-500/10 text-blue-400 text-sm font-medium mb-4">
+
+      <span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+
+      Available for Work
+    </div>
+
+    <h2 id="greeting"
+      class="text-xl font-bold text-white mb-2">
+    </h2>
+
+    <h1 class="text-6xl font-bold mb-4 typing-text">
+      Hi,I'm Priyanka
+    </h1>
+
+    <p class="text-gray-400 mb-6">
+      Full Stack Developer | MERN Stack
+    </p>
+
+    <div class="mt-6">
+      <button id="get-location"
+        class="bg-blue-300 px-4 py-2 rounded hover:bg-blue-600 transition">
+        Get My Location 📍
+      </button>
+
+      <p id="location-message" class="mt-3 text-gray-400"></p>
+    </div>
+
+    <div class="flex gap-4 mt-6">
+      <a href="#projects"
+        class="bg-blue-300 px-6 py-3 rounded-lg">
+        View Work
+      </a>
+
+      <a href="#contact"
+        class="border px-6 py-3 rounded-lg">
+        Contact
+      </a>
+    </div>
+
+  </div>
+
+</section> 
+<!--ABOUT-->
+
     <section id="about" class="slide-down">
-      <h2 class="text-3xl font-bold mb-6 text-center">About</h2>
-<p class="text-gray-400">
+      
+       <h2 class="text-5xl font-extrabold mb-8  h-20 text-center text-white tracking-wide">
+  About
+</h2>
+<p class="text-gray-300 text-xl leading-12  font-medium h-60">
   I am a passionate Full Stack Developer specializing in the MERN stack, with a strong interest in building responsive and user-friendly web applications. <br>
   I enjoy working with data, creating visualizations, and continuously learning new technologies to grow as a developer.
 </p>
- <div class="grid grid-cols-2 gap-4 mt-6 text-gray-400">
+<div class=" grid grid-cols-2 gap-6 mt-1 text-gray-200 text-xl font-semibold ">
+
     <p>💻 800+ GitHub contributions</p>
-    <p> Competative programmer</p>
+    <p>🏆 Competitive programmer</p>
     <p>🚀 Project Builder</p>
     <p>🎯 Focused on Full Stack</p>
-  </div>
+
+</div>
 </section>
     <!-- PROJECTS -->
     <section id="projects" class="slide-down">
-      <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
+      <h2 class="text-5xl font-extrabold mb-6 text-center h-30">Projects</h2>
 
       <div class="flex gap-4 mb-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105">
         <input id="project-search" type="text"
@@ -187,30 +244,59 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
 
     <!-- SKILLS -->
     <section id="skills" class="slide-down">
-      <h2 class="text-3xl font-bold mb-6 text-center">Skills</h2>
+      <h2 class="text-5xl font-extrabold mb-6 text-center h-10">Skills</h2>
 
       <div id="skills-container" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
     </section>
 
     <!-- EDUCATION -->
-    <section id="education" class="slide-down">
-  <h2 class="text-3xl font-bold mb-6 text-center">Education</h2>
+    <!-- <section id="education" class="slide-down">
+  <h2 class="text-5xl font-extrabold mb-6 text-center h-30">Education</h2>
 
   <div id="experience-container" class="grid md:grid-cols-2 gap-6"></div>
   
-</section>
+</section> -->
+<section id="education" class="min-h-screen flex flex-col justify-center">
 
+  <h2 class="text-5xl font-black text-center mb-16">
+    Education
+  </h2>
+
+  <div class="relative flex items-center justify-center">
+
+   
+    <button id="prevBtn"
+      class="absolute left-0 z-10 bg-gray-700 hover:bg-gray-600
+      w-14 h-14 rounded-full text-3xl">
+      ‹
+    </button>
+
+   
+  <div id="education-slider"
+class="flex gap-10 overflow-hidden scroll-smooth w-full max-w-[950px] p-4">
+</div>
+
+   
+    <button id="nextBtn"
+      class="absolute right-0 z-10 bg-gray-700 hover:bg-gray-600
+      w-14 h-14 rounded-full text-3xl">
+      ›
+    </button>
+
+  </div>
+
+</section> 
 <!--Experience-->
 <section id="experience" class="slide-down">
 
-      <h2 class="text-3xl font-bold mb-6 text-center"> Experience</h2>
+      <h2 class="text-5xl font-extrabold mb-6 text-center h-30"> Experience</h2>
       <div id="internship-container" class="grid md:grid-cols-2 gap-6">
         </div>
     </section>
 
     <!-- CONTACT -->
    <section id="contact"class="slide-down">
-   <h2 class="text-3xl font-bold mb-6 text-center">Contact</h2> 
+   <h2 class="text-5xl font-extrabold mb-6 text-center h-30">Contact</h2> 
    
   <div class="grid md:grid-cols-2 gap-10">
 
@@ -255,6 +341,7 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
     </div>
 
   </div>
+  
 </section>
     
 
@@ -264,7 +351,7 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
 <!-- SCRIPTS (UNCHANGED) -->
 <script src="js/data/projects.js"></script>
 <script src="js/data/skills.js"></script>
-<script src="js/data/Education.js"></script>
+<script src="js/data/education.js"></script>
 <script src="js/data/internship.js"></script>
 <script src="js/data/testimonial.js"></script>
 
@@ -340,9 +427,35 @@ document.addEventListener("DOMContentLoaded", () => {
   lucide.createIcons();
 });
 </script>
+<script>
+
+const slider = document.getElementById("education-slider");
+
+document.getElementById("nextBtn").onclick = () => {
+
+  slider.scrollBy({
+    left: 320,
+    behavior: "smooth"
+  });
+
+};
+
+document.getElementById("prevBtn").onclick = () => {
+
+  slider.scrollBy({
+    left: -320,
+    behavior: "smooth"
+  });
+
+};
+
+</script>
+
 <footer class="text-center py-6 bg-gray-800 text-gray-400 mt-10">
   © 2026 Priyanka S | All Rights Reserved
 </footer> 
 
+
+  
 </body>
 </html> 

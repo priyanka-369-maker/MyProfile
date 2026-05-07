@@ -195,4 +195,116 @@ section.show-section {
 .light-mode a {
   color: #2563eb;
 }
+/*  */
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
 
+
+main{
+    min-height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+}
+
+section{
+    min-height: 100vh;
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 40px;
+}
+/*  */
+#education-slider::-webkit-scrollbar{
+    display: none;
+}
+/*  */
+html, body{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+/*  */
+.light-mode #education-slider > div {
+  background: white !important;
+  color: black !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/* LIGHT THEME */
+.light-mode {
+  background: #f5f5f5;
+  color: black;
+}
+
+/* SIDEBAR */
+.light-mode aside {
+  background: white !important;
+  color: black;
+}
+
+/* EDUCATION LIGHT MODE */
+.light-mode #education-slider > div {
+  background: white !important;
+  color: black !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.light-mode #education-slider p {
+  color: #444 !important;
+}
+
+.light-mode #education-slider h3 {
+  color: #a855f7 !important;
+}
+
+.light-mode #education-slider h4 {
+  color: black !important;
+}
+/*  */
+/* ABOUT SECTION LIGHT MODE */
+.light-mode #about p,
+.light-mode #about h2,
+.light-mode #about div,
+.light-mode #about span {
+  color: black !important;
+}
+
+/* Optional softer paragraph color */
+.light-mode #about p {
+  color: #444 !important;
+}
+
+/* Skills / icons text inside about */
+.light-mode #about .text-gray-200,
+.light-mode #about .text-gray-300,
+.light-mode #about .text-gray-400 {
+  color: #444 !important;
+}
+/*  */
+/* HOME SECTION LIGHT MODE */
+.light-mode #home h1,
+.light-mode #home h2,
+.light-mode #home p,
+.light-mode #home span {
+  color: black !important;
+}
+
+/* Greeting text */
+.light-mode #greeting {
+  color: black !important;
+}
+
+/* Available for work badge */
+.light-mode #home .bg-blue-500\/10 {
+  background: rgba(59,130,246,0.1) !important;
+}
+
+/* Typing text cursor */
+.light-mode .typing-text {
+  border-right: 3px solid #2563eb;
+}
+/*  */
