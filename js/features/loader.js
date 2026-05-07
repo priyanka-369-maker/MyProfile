@@ -1,13 +1,17 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
+
   const loader = document.getElementById("loader");
+  const home = document.getElementById("home");
 
-  // Minimum loading time (optional)
+  loader.style.opacity = "0";
+  loader.style.transition = "opacity 0.5s ease";
+
   setTimeout(() => {
-    loader.style.opacity = "0";
-    loader.style.transition = "opacity 0.5s ease";
+    loader.style.display = "none";
 
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500);
-  }, 1500); // 1.5 sec loader
+    // start animation AFTER loader disappears
+    home.classList.add("show-home");
+
+  }, 500);
+
 });

@@ -1,41 +1,25 @@
-const dot = document.getElementById("cursor-dot");
-const ring = document.getElementById("cursor-ring");
+const cursor = document.getElementById("cursor");
 
-let mouseX = 0;
-let mouseY = 0;
-let ringX = 0;
-let ringY = 0;
-
-// Track mouse instantly for dot
 document.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-
-  dot.style.left = mouseX + "px";
-  dot.style.top = mouseY + "px";
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
 });
 
-// Smooth follow for ring (lag effect)
-function animate() {
-  ringX += (mouseX - ringX) * 0.15;
-  ringY += (mouseY - ringY) * 0.15;
-
-  ring.style.left = ringX + "px";
-  ring.style.top = ringY + "px";
-
-  requestAnimationFrame(animate);
-}
-animate();
-
-// Hover effect
+/* Hover effect on buttons & links */
 const hoverItems = document.querySelectorAll("a, button");
 
-hoverItems.forEach(el => {
-  el.addEventListener("mouseenter", () => {
-    ring.classList.add("hover");
+hoverItems.forEach(item => {
+
+  item.addEventListener("mouseenter", () => {
+    cursor.style.width = "35px";
+    cursor.style.height = "35px";
+    cursor.style.background = "#2563eb";
   });
 
-  el.addEventListener("mouseleave", () => {
-    ring.classList.remove("hover");
+  item.addEventListener("mouseleave", () => {
+    cursor.style.width = "20px";
+    cursor.style.height = "20px";
+    cursor.style.background = "#60a5fa";
   });
+
 });
