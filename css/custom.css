@@ -21,7 +21,7 @@
 section {
   opacity: 0;
   transform: translateY(-80px);
-  animation: slideDown 1s ease-out forwards;
+  animation: slideDown 2s ease-out forwards;
 }
 
 /* Delay each section */
