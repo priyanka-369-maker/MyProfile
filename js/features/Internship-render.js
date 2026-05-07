@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("div");
 
       card.className =
-        "bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition";
+        "card bg-gray-800 p-6 rounded-lg transition-all duration-300 shadow hover:scale-105 transition";
 
       card.innerHTML = `
         <h3 class="text-xl font-bold text-blue-400">${item.role}</h3>

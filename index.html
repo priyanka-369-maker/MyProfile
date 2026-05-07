@@ -10,12 +10,15 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
- <body class="bg-gray-900 text-white light:bg-white light:text-black"> 
+ <!-- <body class="bg-gray-900 text-white light:bg-white light:text-black">  -->
+  <!-- <body class="transition-all duration-300 bg-gray-900 text-white"> -->
+    <body id="body" class="bg-gray-900 text-white transition-all duration-300">
 
 
   <div class="fixed inset-0 -z-10 
 bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px,transparent_40px)]">
 </div>
+
   <div id="cursor">
     <div id="cursor-dot"></div>
 <div id="cursor-ring"></div>
@@ -33,8 +36,9 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
 <div class="flex min-h-screen">
 
   <!-- SIDEBAR -->
-  
-  <aside class="w-64 bg-gray-800 p-6 fixed h-full">
+<!--   
+  <aside class="w-64 bg-gray-800 p-6 fixed h-full"> -->
+    <aside class="w-64 bg-gray-800 p-6 fixed h-full transition-all duration-300">
 
     <div class="text-center">
       <img src="Myphoto.jpeg" class="w-28 h-28 rounded-full mx-auto mb-4" />
@@ -227,7 +231,7 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
     </form>
 
     <!-- RIGHT: CONTACT DETAILS -->
-    <div class="space-y-4 bg-gray-800 p-6 rounded-lg">
+    <div class="card space-y-4 bg-gray-800 p-6 rounded-lg transition-all duration-300">
       <h3 class="text-xl font-semibold">Get in touch</h3>
 
       <p>
@@ -294,26 +298,43 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
 <script src="js/features/geolocation.js"></script>
 <script src="js/main.js"></script>
 
-<!-- THEME TOGGLE -->
+
+
 <script>
-const toggleBtn = document.getElementById('theme-toggle');
-const body = document.body;
+const toggleBtn = document.getElementById("theme-toggle");
+const body = document.getElementById("body");
+const pattern = document.getElementById("bg-pattern");
 
-let isDark = true;
+toggleBtn.addEventListener("click", () => {
 
-toggleBtn.addEventListener('click', () => {
-  if (isDark) {
-    body.classList.remove('bg-gray-100','text-white');
-    body.classList.add('bg-white','text-black');
-    toggleBtn.textContent = ' Light';
+  body.classList.toggle("light-mode");
+
+  if (body.classList.contains("light-mode")) {
+
+    // LIGHT MODE
+    body.classList.remove("bg-gray-900", "text-white");
+    body.classList.add("bg-white", "text-black");
+
+    // LIGHT PATTERN
+    pattern.style.backgroundImage =
+    "repeating-linear-gradient(135deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 1px, transparent 1px, transparent 40px)";
+
+    toggleBtn.textContent = "Dark";
+
   } else {
-    body.classList.remove('bg-white','text-black');
-    body.classList.add('bg-gray-900','text-white');
-    toggleBtn.textContent = 'Dark';
+
+    // DARK MODE
+    body.classList.remove("bg-white", "text-black");
+    body.classList.add("bg-gray-900", "text-white");
+
+    // DARK PATTERN
+    pattern.style.backgroundImage =
+    "repeating-linear-gradient(135deg, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 40px)";
+
+    toggleBtn.textContent = "Light";
   }
-  isDark = !isDark;
 });
-</script> 
+</script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   lucide.createIcons();
@@ -321,6 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 <footer class="text-center py-6 bg-gray-800 text-gray-400 mt-10">
   © 2026 Priyanka S | All Rights Reserved
-</footer>
+</footer> 
+
 </body>
 </html> 
