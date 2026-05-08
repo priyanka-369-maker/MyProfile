@@ -18,11 +18,11 @@
    PAGE LOAD ANIMATION
 ========================= */
 
-section {
+/* section {
   opacity: 0;
   transform: translateY(-80px);
   animation: slideDown 3s ease-out forwards;
-}
+} */
 
 /* Delay each section */
 #home {
@@ -207,17 +207,21 @@ main{
     scroll-snap-type: y mandatory;
     overflow-x: hidden;
 }
-
-section{
+/* section{
     min-height: 100vh;
     scroll-snap-align: start;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
     padding: 40px;
+} */
+ section{
+  min-height: 100vh;
+  scroll-snap-align: start;
+  padding: 20px;
+
+  opacity: 0;
+  transform: translateY(-80px);
+  animation: slideDown 1.2s ease-out forwards;
 }
+
 /*  */
 #education-slider::-webkit-scrollbar{
     display: none;
@@ -308,3 +312,10 @@ html, body{
   border-right: 3px solid #2563eb;
 }
 /*  */
+#home img{
+  transition: 0.4s ease;
+}
+
+#home img:hover{
+  transform: scale(1.03);
+}

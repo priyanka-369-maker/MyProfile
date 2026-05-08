@@ -39,7 +39,7 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
 <!--   
   <aside class="w-64 bg-gray-800 p-6 fixed h-full"> -->
     <!-- <aside class="w-64 bg-gray-800 p-6 fixed h-full transition-all duration-300"> -->
-      <aside class="w-56 bg-gray-800 p-4 fixed h-full transition-all duration-300 overflow-y-auto">
+      <aside class="hidden md:block w-56 bg-gray-800 p-4 fixed h-full transition-all duration-300 overflow-y-auto">
 
     <div class="text-center">
       <img src="Myphoto.jpeg" class="w-28 h-28 rounded-full mx-auto mb-4" />
@@ -77,33 +77,33 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
 
   <!-- MAIN -->
   <!-- <main class="ml-64 flex-1 p-10 "> -->
-    <main class="ml-64 flex-1 p-10 overflow-x-hidden">
+    <main class="md:ml-64 flex-1 md:p-10 px-2 py-4 overflow-x-hidden">
       <!-- <main class="ml-64 flex-1 p-10 overflow-y-auto overflow-x-hidden h-screen"> -->
-<div class="flex justify-end items-center gap-6">
+<div class="flex justify-between md:justify-end items-center gap-6">
 
   
 
   <!-- Social Icons -->
-  <div class="flex items-center gap-5 text-gray-400">
-
-    <a href="https://github.com/priyanka-369-maker" target="_blank">
-      <i data-lucide="github" class="w-6 h-6 hover:text-white transition"></i>
-    </a>
-
-    <a href="https://instagram.com/priya__shivaram" target="_blank">
-      <i data-lucide="instagram" class="w-6 h-6 hover:text-pink-400 transition"></i>
-    </a>
-
-    <a href="mailto:priyashivaram2005@gmail.com">
-      <i data-lucide="mail" class="w-6 h-6 hover:text-blue-400 transition"></i>
-    </a>
-
-  </div>
   <!-- PS Logo -->
   <div class="w-10 h-10 flex items-center justify-center 
-              bg-gray-900 rounded-full text-white font-bold">
-    PS
-  </div>
+  bg-gray-900 rounded-full text-white font-bold">
+  PS
+</div>
+<div class="flex items-center gap-5 text-gray-400">
+
+  <a href="https://github.com/priyanka-369-maker" target="_blank">
+    <i data-lucide="github" class="w-6 h-6 hover:text-white transition"></i>
+  </a>
+
+  <a href="https://instagram.com/priya__shivaram" target="_blank">
+    <i data-lucide="instagram" class="w-6 h-6 hover:text-pink-400 transition"></i>
+  </a>
+
+  <a href="mailto:priyashivaram2005@gmail.com">
+    <i data-lucide="mail" class="w-6 h-6 hover:text-blue-400 transition"></i>
+  </a>
+
+</div>
 
   <!-- Theme Button -->
   <button id="theme-toggle" class="px-4 py-2 rounded-lg bg-gray-700">
@@ -149,7 +149,81 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
         <a href="#contact" class="border px-6 py-3 rounded-lg">Contact</a>
       </div>
     </section>  -->
-    <section id="home" class="slide-down flex flex-col justify-start pt-24 min-h-screen">
+<section id="home"
+class="min-h-screen md:flex flex-row items-center justify-between px-16">
+     
+
+  <!-- LEFT SIDE -->
+ <div class="md:w-[55%]">
+
+    <!-- Available Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1 
+    rounded-full border border-blue-500/30 
+    bg-blue-500/10 text-blue-400 text-sm font-medium mb-5">
+
+      <span class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+
+      Available for Work
+    </div>
+
+    <!-- Greeting -->
+    <h2 id="greeting"
+    class="text-2xl font-bold text-white mb-3">
+    </h2>
+
+    <!-- Name -->
+    <h1 class="text-7xl font-bold leading-tight mb-5">
+      Hi,I'm Priyanka
+    </h1>
+    <img src="Myphoto.jpeg"
+      class="hidden max-md:block w-auto h-[380px] object-cover 
+rounded-[35px] border-4 border-blue-200 shadow-2xl">
+
+    <!-- Role -->
+    <p class="text-gray-400 text-xl mb-8">
+      Full Stack Developer | MERN Stack
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex gap-5">
+
+      <a href="#projects"
+      class="bg-blue-300 px-8 py-4 rounded-xl hover:bg-blue-400 transition">
+      View Work
+      </a>
+
+      <a href="#contact"
+      class="border border-white px-8 py-4 rounded-xl hover:bg-white hover:text-black transition">
+      Contact
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE IMAGE -->
+  <!-- <div class="w-1/2 flex justify-end items-start"> -->
+    <!-- <div class="w-1/2 flex justify-end pt-20 pr-10"> -->
+      <div class="hidden md:flex md:w-[45%]  justify-end items-center">
+
+    <div class="relative">
+
+      <!-- Glow -->
+      <div class="absolute inset-0 bg-blue-400/20 blur-3xl rounded-[40px]">
+      </div>
+ <!-- Image -->
+      <img src="Myphoto.jpeg"
+      class="relative w-[300px] h-[380px] object-cover 
+rounded-[35px] border-4 border-blue-200 shadow-2xl">
+
+ 
+
+    </div>
+
+  </div>
+
+</section>
+     <!-- <section id="home" class="slide-down flex flex-col justify-start pt-24 min-h-screen">
 
   <div class="max-w-2xl">
 
@@ -196,8 +270,15 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
     </div>
 
   </div>
+    <div class="w-1/2 flex justify-end">
 
-</section> 
+    <img src="Myphoto.jpeg"
+    class="w-[350px] h-[450px] object-cover rounded-[30px]
+    border-4 border-blue-200 shadow-2xl">
+
+  </div>
+
+</section>  -->
 <!--ABOUT-->
 
     <section id="about" class="slide-down">
@@ -205,7 +286,7 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
        <h2 class="text-5xl font-extrabold mb-8  h-20 text-center text-white tracking-wide">
   About
 </h2>
-<p class="text-gray-300 text-xl leading-12  font-medium ">
+<p class="text-gray-300 text-xl md:leading-12  font-medium text-justify">
   I am a passionate Full Stack Developer specializing in the MERN stack, with a strong interest in building responsive and user-friendly web applications. <br>
   I enjoy working with data, creating visualizations, and continuously learning new technologies to grow as a developer.
 </p>
@@ -222,7 +303,7 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
     <section id="projects" class="slide-down">
       <h2 class="text-5xl font-extrabold mb-6 text-center h-30">Projects</h2>
 
-      <div class="flex gap-4 mb-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105">
+      <!-- <div class="flex gap-4 mb-6 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105">
         <input id="project-search" type="text"
           placeholder="Search..."
           class="flex-1 p-3 rounded bg-gray-800">
@@ -233,7 +314,7 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
           <option value="name-desc">Z-A</option>
           <option value="status">Status</option>
         </select>
-      </div>
+      </div> -->
 
       <!-- Dynamic Projects -->
       <!-- <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div> -->
@@ -267,19 +348,19 @@ bg-[repeating-linear-gradient(135deg,#ffffff08_0px,#ffffff08_1px,transparent_1px
 
    
     <button id="prevBtn"
-      class="absolute left-0 z-10 bg-gray-700 hover:bg-gray-600
+      class="hidden md:block absolute -left-6 z-10 bg-gray-700 hover:bg-gray-600
       w-14 h-14 rounded-full text-3xl">
       ‹
     </button>
 
    
   <div id="education-slider"
-class="flex gap-10 overflow-hidden scroll-smooth w-full max-w-[950px] p-4">
+class="grid md:flex gap-10 overflow-hidden scroll-smooth w-full max-w-[950px] p-4">
 </div>
 
    
     <button id="nextBtn"
-      class="absolute right-0 z-10 bg-gray-700 hover:bg-gray-600
+      class="hidden md:block absolute -right-6 z-10 bg-gray-700 hover:bg-gray-600
       w-14 h-14 rounded-full text-3xl">
       ›
     </button>
@@ -440,6 +521,7 @@ document.getElementById("nextBtn").onclick = () => {
   });
 
 };
+
 
 document.getElementById("prevBtn").onclick = () => {
 

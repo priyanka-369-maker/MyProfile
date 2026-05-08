@@ -97,33 +97,35 @@ function renderEducation() {
     const card = document.createElement("div");
 
     card.className = `
-      min-w-[320px]
+      max-w-[320px]
+      max-md:w-[280px]
+      md:w-[400px]
       ${edu.bg}
       rounded-3xl
-      p-8
+      px-4 py-8
       shadow-2xl
       flex-shrink-0
     `;
 
     card.innerHTML = `
 
-      <h3 class="text-4xl font-black ${edu.titleColor} mb-6">
+      <h3 class="md:text-4xl text-2xl font-black ${edu.titleColor} mb-6">
         ${edu.short}
       </h3>
 
-      <h4 class="text-2xl font-bold mb-3">
+      <h4 class="md:text-2xl text-lg font-bold mb-1">
         ${edu.course}
       </h4>
 
-      <p class="text-gray-300 text-lg mb-2">
+      <p class="text-gray-300 md:text-lg text-md mb-2">
         ${edu.year}
       </p>
 
-      <p class="text-gray-400 text-lg mb-6">
+      <p class="text-gray-400 md:text-lg text-sm mb-6">
         ${edu.college}
       </p>
 
-      <p class="${edu.scoreColor} text-2xl font-bold">
+      <p class="${edu.scoreColor} md:text-2xl  text-md font-bold">
         ${edu.percentage}
       </p>
 
